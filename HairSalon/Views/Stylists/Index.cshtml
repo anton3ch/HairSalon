@@ -4,7 +4,7 @@
 
 @using HairSalon.Models;
 
-<h1>Stylists</h1>
+<h1 class="m-2">Stylists</h1>
 
 
 @if (@Model.Count == 0)
@@ -12,12 +12,14 @@
   <h3>No stylists have been added yet!</h3>
 } 
 
-<ul>
+<ul class="mb-5 list-group">
+  <li class="listTitle">Stylist name | Number of clients</li>
   @foreach(Stylist stylist in Model)
   {
-    <li>@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId })</li>
+    <li class="list-group-item list-group-item-action">@Html.ActionLink($"{stylist.Name}", "Details", new { id = stylist.StylistId }) <span class='gray'> | @stylist.Clients.Count()</span></li>
   }
 </ul>
 
-<p>@Html.ActionLink("Add new stylist", "Create")</p>
-<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<div class="button">
+  <p>@Html.ActionLink("Add new stylist", "Create")</p>
+</div>

@@ -1,0 +1,38 @@
+@{
+  Layout = "_Layout";
+}
+
+@model HairSalon.Models.Stylist
+
+<h2 class="m-2">Edit</h2>
+
+<h4 class="m-4">Edit Stylist: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model => model.StylistId)
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      @Html.LabelFor(model => model.Name)
+      @Html.EditorFor(model => model.Name)
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      @Html.LabelFor(model => model.Specialty)
+      @Html.EditorFor(model => model.Specialty)
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      @Html.LabelFor(model => model.Description)
+      @Html.EditorFor(model => model.Description)
+    </div>
+  </div>
+
+  <input type="submit" value="Save" class="btn-secondary"/>
+}
+
+<div class="button">
+  <p>@Html.ActionLink("Back to list", "Index")</p>
+</div>
