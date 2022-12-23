@@ -1,0 +1,83 @@
+html {
+	height: 100%;
+}
+
+body {
+	background: rgb(221,180,180);
+background: linear-gradient(0deg, #757f9a95 0%, #d7dde873 74%);
+}
+
+.d-flex {
+	min-height: 70vh;
+}
+
+.title-height {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+.title-links {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	font-size: 1.7rem;
+}
+
+div.footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	color: #CCC;
+	background: #333;
+	padding: 0px;
+}
+
+/* div.header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	color: rgb(0, 0, 0);
+	background: rgb(219, 219, 219);
+	padding: 0px;
+} */
+
+div#jumb {
+margin: auto !important;
+/* float: right; */
+min-width: 650px;
+}
+
+.listTitle {
+	list-style-type: none;
+	color: rgb(164, 164, 164);
+	margin-bottom: 20px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	max-height: 41vh;
+	overflow-y: scroll;
+}
+
+.button {
+	margin: 20px;
+	font-size: 1.5rem
+}
+
+.red {
+	color: red;
+}
+
+.gray {
+	color: rgb(148, 148, 148);
+}
+
+<!-- HTML !-->
+<button class="button-4" role="button">Button 4</button>
+
+/* CSS */
