@@ -4,24 +4,35 @@
 
 @model HairSalon.Models.Client
 
-<h2>Edit @ViewBag.StylistId</h2>
+<h2 class="m-2">Edit</h2>
 
-<h4>Edit this Client: @Html.DisplayFor(model => model.Name)</h4>
+<h4 class="m-4">Edit Client: @Html.DisplayFor(model => model.Name)</h4>
 
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.ClientId)
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      @Html.LabelFor(model => model.Name)
+      @Html.EditorFor(model => model.Name)
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      @Html.LabelFor(model => model.Notes)
+      @Html.EditorFor(model => model.Notes)
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      @Html.LabelFor(model => model.Stylist)
+      @Html.DropDownList("StylistId")
+    </div>
+  </div>
 
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
-
-  @Html.LabelFor(model => model.Notes)
-  @Html.EditorFor(model => model.Notes)
-
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-
-  <input type="submit" value="Save" />
+  <input type="submit" value="Save" class="btn-secondary"/>
 }
 
-<p>@Html.ActionLink("Back to list", "Index")</p>
+<div class="button">
+  <p>@Html.ActionLink("Back to list", "Index")</p>
+</div>
