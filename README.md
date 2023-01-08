@@ -62,6 +62,17 @@ Eau Claire's Salon lets owner to add and track her stylists and their clients.
   ```
   [PASSWORD] is your password
 
+- Create MySQL database
+  ```
+    Open MySQLWorkbench, log in, and connect to your local server
+    Go to the Administration tab, select Data Import/Restore
+    Select Import from Self Contained File
+    Select ../anton_ch.sql from the top level of the cloned repository, HairSalon.
+    Select "New..." and set new schema name to anton_ch
+    Select 'Start Import'
+    Now you have a copy of the project database on your machine.
+  ```
+
 - Build the project:
   ```
    ~/Desktop/HairSalon/HairSalon $ dotnet build
